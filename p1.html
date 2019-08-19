@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				background-color: #eeece9;
+				position: relative;
+				padding-bottom: 10px;
+				
+			}
+			.zhong{
+    			width: 990px;
+    			margin: 0px auto;
+			}
+			.clear{
+				clear: both;
+			}
+			@media only screen and (min-width:500px ) {
+				
+			
+			
+			
+			#header{
+				width: 100%;
+				height: 129px;
+				background-color: #ff8100;
+			}
+			.header_z{
+				width: 990px;
+    			height: 129px;
+    			margin: 0px auto;
+    			position: relative;
+    			z-index: 5000;
+   					}
+   			.header_z img{
+   				width: 240px;
+   				height: 100px;
+   				padding: 10px 10px 10px 0;
+   			}			
+			#sou{
+				height: 16px;
+    			width: 326px;
+   				padding: 10px;
+    			position: absolute;
+   				top: 46px;
+   				left: 320px;
+   				line-height: 16px;
+    			overflow: hidden;
+    			border-radius: 20px 3px 3px 20px;
+    			border-top: solid 2px #FFFFFF;
+    			border-left: solid 2px #FFFFFF;
+    			border-bottom: solid 3px #FFFFFF;
+			}
+			.submit{
+				height: 41px;
+    			width: 82px;
+    			position: absolute;
+    			top: 46px;
+    			line-height: 32px;
+    			left: 668px;
+    			border: 2px solid #fff;
+    			border-left: 0px;
+    			color: #fff;
+    			border-top-right-radius: 4px;
+    			border-bottom-right-radius: 4px;
+    			background: #ff8100;
+    			cursor: pointer;
+			}
+			.denglu ul{
+				position: absolute;
+				top: 55px;
+				left: 850px;
+			}
+			.denglu ul li{
+				float: left;
+				margin-left: 18px;
+				list-style: none;
+				
+			}
+			.denglu a{
+				text-decoration: none;
+				display: block;
+    			height: 28px;
+ 				padding: 0px 10px 0px 10px;
+   			 	line-height: 28px;
+    			color: #fff;
+    			font-size: 12px;
+    			border-radius: 4px;
+				
+			}
+			.denglu a:hover{
+				background: #C12E2A;
+			}
+			/*菜单栏*/
+			#nav{
+				height: 76px;
+    			width: 100%;
+    			background: #fff;
+    			box-shadow: 10px 0px 10px rgba(0,0,0,0.3);
+    			position: relative;
+    			z-index: 2000;
+			}
+			#nav li{
+				width: 120px;
+				height: 77px;
+				float: left;
+				
+				line-height: 37px;
+				list-style: none;
+				position: relative;
+			}
+			#nav>ul>li>a{
+				padding: 20px 10px 20px 10px;
+				text-decoration: none;
+				font-size: 20px;
+				color: #444;
+				font-family: "微软雅黑";
+				font-weight: bold;
+				display: block;
+				text-align: center;
+			}
+			.current{
+				position: absolute;
+				width: 45px;
+				height: 5px;
+				top:70px;
+				left: 37px;
+				background-image: url(img/pic1.png);
+				
+			}
+			.none{
+				display: none;
+			}
+			/*下拉菜单*/
+			#daquan{
+				width: 930px;
+    			margin: 0px auto;
+    			background: #fafafa;
+    			position: relative;
+    			box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.1);
+    			padding: 18px 18px 30px 18px;
+			}
+			#daquan dl dd{
+				display: inline-block;
+    			vertical-align: top;
+    			height: 24px;
+    			line-height: 24px;
+    			padding-right: 14px;
+    			font-family: Microsoft Yahei,黑体;
+						}
+			#daquan dl a{
+				font-size: 14px;
+				color: black;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			#daquan dl dt{
+				display: block;
+    			height: 24px;
+    			line-height: 24px;
+			}
+			#daquan dl dt a{
+				color: #ff8100;
+    			font-size: 17px;
+    			font-family: Microsoft Yahei,黑体;
+			}
+			#daquan dl dd a{
+				color: #444;
+			}
+			#daquan dl dt a:hover{
+				background: #ff3232;
+				color: #FFFFFF;
+			}
+			#daquan dl dd a:hover{
+				background: #ff3232;
+				color: #FFFFFF;
+			}
+			.menu{
+				position: absolute;
+				left: -110px;
+				display: none;
+			}
+			.menu img{
+				position: absolute;
+				left: 857px;
+				top: 100px;
+				width: 200px;
+				height: 250px;
+			}
+			/*推荐*/
+			
+			.biaoti h2{
+				padding-left: 37%;
+    			height: 120px;
+    			line-height: 120px;
+    			font-size: 24px;
+    			color: #444;
+    			font-family: Microsoft Yahei;
+			}
+			#tuijian{
+				width: 898px;
+    			height: 388px;
+    			
+    			margin: 0 auto;
+			}
+			#tuijian img{
+				width: 898px;
+    			height: 388px;
+			}
+			/*CSS3*/
+			.list a{
+				text-decoration: none;
+				float: left;
+				
+				transition: all 2s ease 0s;
+			}
+			.list a:hover{
+				transform:scale(1.1,1.1);
+			}
+			/*资讯*/
+			#zixun{
+				width: 898px;
+    			
+    			height: 388px;
+    			margin: 0 auto;
+    			margin-top: 40px;
+    			margin-bottom: 40px;
+    			background-color: #FFFFFF;
+    			box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+			}
+			
+			#left{
+				float: left;
+				margin-left: 25px;
+    			margin-top: 15px;
+			}
+			#zixun #left img{
+			display:  block;
+			width: 450px;
+			height: 300px;
+			}
+			#right{
+				width: 325px;
+				float: right;
+				margin-right: 52px;
+    			margin-top: 22px;
+			}
+			#right ul li{
+				list-style: none;
+			}
+			#right ul li a{
+				text-decoration: none;
+				display: block;
+				font-size: 14px;
+				line-height: 266%;
+				color: #930;
+				border-bottom-width: 1px;
+				border-bottom-style: dashed;
+				border-bottom-color: #999999;
+				
+			}
+			#zixun #right ul li a:hover{
+				text-shadow: 1px 1px 3px #444;
+				
+			}
+			#zixun .zixun_dh h3{
+				float: left;
+				padding: 0px 1px 0px 10px;
+			}
+			#zixun .zixun_dh{
+				padding: 15px 0px 10px 10px;
+			}
+			#zixun .zixun_dh a{
+				text-decoration: none;
+				color: #930;
+			}
+			#zixun .zixun_dh a:hover{
+				color: #FFFFFF;
+				background-color: #930;
+				
+			}
+			/*Tab*/
+			#tab ul{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			#tab{
+				width: 900px;
+				background-color: #FFFFFF;
+				margin: 0 auto;
+				margin-top: 30px;
+			}
+			.tab_title{
+				height: 30px;
+			}
+			.tab_title li{
+				width: 127px;
+				height: 50px;
+				float: left;
+				font-size: 14px;
+				text-align: center;
+				line-height: 50px;
+				border-right: 1px solid #CCCCCC;
+				background: #eef;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.tab_title .last{
+				border-right-width: 0px;
+			}
+			.tab_content{
+				clear: both;
+				height: 350px;
+			}
+			.tab_title .curr{
+				font-weight: bold;
+				border-bottom: 1px solid #FFFFFF;
+				border-top: 5px solid #ff8100;
+				background: #FFFFFF;
+				margin-top: -5px;
+			}
+			.none{display: none;}
+			.content_L{
+				float: left;
+				margin-right: 20px;
+				clear: both;
+			}
+			.content_L img{
+				    height: 350px;
+    				width: 300px;
+			}
+			.content_R{
+				padding-top: 15px;
+    width: 565px;
+    float: right;
+			}
+			
+			.content_R h1{
+				padding-right: 70px;
+				font-family: "微软雅黑";
+    			color: #333;
+    		
+			}
+			.youdian dt a{
+				display: inline-block;
+    			vertical-align: top;
+    			float: left;
+    			background: #ff8100;
+    			border: 1px solid #ff8100;
+    			height: 32px;
+    			padding: 0px 8px;
+    			margin-bottom: 30px;
+    			line-height: 32px;
+    			color: #fff;
+   	 			text-align: center;
+    			margin-right: 10px;
+    			font-size: 14px;
+    			margin-top: 10px;
+    			text-decoration: none;
+			}
+			.content_R h1 span a{
+				padding-left: 220px;
+				font-size: 17px;
+				text-decoration: none;
+				color: #ff8100;
+				font-family: ;
+			}
+			.content_R h1 span a:hover{
+				color: red;
+			}
+			.youdian{
+				padding: 0;
+				margin: 0;
+			}
+			.youdian_2 li{
+				    width: 489px;
+    				margin-top: 10px;
+			}
+			.youdian_2 li a{
+				margin-top: 10px;
+				text-decoration: none;
+				color: #444;
+			}
+			.youdian_2 li a:hover{
+				color: #ff8100;
+			}
+			/*footer*/
+			
+			footer{
+				width: 100%;
+				padding: 5% 0;
+				color: #fff;
+				text-align: center;
+				background-color: #ff8100;
+			}
+			footer .mingzi h1{
+				font-size: 1.5em;
+    			font-family: monospace;
+			}
+			footer .lianxi li{
+				display: inline-block;
+    			vertical-align: top;
+			}
+			footer .lianxi li a{
+				display: inline-block;
+    			vertical-align: top;
+    			color: #FFFFFF;
+    			padding: 0px 10px;
+    			line-height: 24px;
+    			height: 24px;
+    			text-decoration: none;
+			}
+			footer .lianxi li a:hover{
+				background-color: #930;
+				color: #FFFFFF;
+			}
+			}
+			
+			
+			
+			
+			
+			
+			@media only screen and (max-width: 499px) {
+				#header .header_z{
+				width: 100%;
+    			height: 5%;
+    			background-color: #ff8100;
+   							}
+   				.header_z img{
+   				padding-left: 60px;
+   				}
+   				#sou{
+				
+   				padding: 7px;
+    			position: absolute;
+   				top: 160px;
+   				left: 67px;
+   				line-height: 16px;
+    			overflow: hidden;
+    			border-radius: 20px 3px 3px 20px;
+    			border-top: solid 2px #FFFFFF;
+    			border-left: solid 2px #FFFFFF;
+    			border-bottom: solid 3px #FFFFFF;
+			}
+			/*TAB*/
+			#tab{
+				display: none;
+			}
+			.submit{
+				   height: 35px;
+    width: 59px;
+    position: absolute;
+    top: 160px;
+    line-height: 32px;
+    left: 254px;
+    border: 2px solid #fff;
+    border-left: 0px;
+    color: #fff;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #ff8100;
+    cursor: pointer;
+			}
+			#tuijian{
+				display: none;
+			}
+			#zixun {
+    		width: 100%;
+    		height: 100%;
+    		margin: 0 auto;
+    		margin-top: 40px;
+    		margin-bottom: 40px;
+    		background-color: #FFFFFF;
+    		box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+			}
+			#zixun img{
+				width: 100%;
+				height: 250px;
+			}
+			#right ul li a {
+    		text-decoration: none;
+    		display: block;
+    		font-size: 14px;
+    		line-height: 266%;
+    		color: #930;
+    		border-bottom-width: 1px;
+    		border-bottom-style: dashed;
+    		border-bottom-color: #999999;
+			}
+			#zixun .zixun_dh a {
+    		text-decoration: none;
+    		color: #930;
+			}
+			#nav .YC{
+				display: none;
+			}
+			.denglu{
+				position: absolute;
+    			top: 157px;
+    			left: 333px;
+			}
+			.denglu li{
+				list-style: none;
+			}
+			.denglu a{
+				text-decoration: none;
+				color: #444;
+			}
+			#nav{
+				    width: 100%;
+    				margin-top: 68px;
+				
+			}
+			#nav li{
+				list-style: none;
+				background-color: #ff8100;
+				border-bottom: 1px solid #444444;
+				
+			}
+			#nav li a{
+				line-height: 50px;
+				font-size: 30px;
+				color: #FFFFFF;
+				text-decoration: none;
+				padding-left: px;
+				    padding-left: 195px;
+			}
+			.biaoti h2{
+				padding-left: 105px;
+    			padding-top: 29px;
+			}
+			footer{
+				width: 100%;
+				padding: 1% 0;
+				color: #fff;
+				text-align: center;
+				background-color: #ff8100;
+			}
+			footer .mingzi h1{
+				font-size: 1.5em;
+    			font-family: monospace;
+			}
+			footer .lianxi li{
+				display: inline-block;
+    			vertical-align: top;
+			}
+			footer .lianxi li a{
+				display: inline-block;
+    			vertical-align: top;
+    			color: #FFFFFF;
+    			padding: 0px 10px;
+    			line-height: 24px;
+    			height: 24px;
+    			text-decoration: none;
+			}
+			footer .lianxi li a:hover{
+				background-color: #930;
+				color: #FFFFFF;
+			}
+			.sousuo {
+    margin-top: -10px;
+}
+			}
+		</style>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+//				nav悬浮
+				$("#nav>ul>li>a").mouseover(function(){
+					var i=$("#nav>ul>li>a").index(this);
+				$(".current").hide().eq(i).show();
+				})
+//				下拉菜单
+				$("#nav>ul>li").hover(function(){
+					$(this).find(".menu").show();
+				},function(){
+					$(this).find(".menu").hide();
+				})
+			})
+				
+//			轮播
+			$(function(){
+				$("#right li").mouseover(function(){
+					var i=$("#right li").index(this);
+			$("#left img").attr("src","img/资讯"+(i+1)+".jpg");/*修改选中元素的属性和值*/
+				})
+			})
+//			tab选项卡			
+			$(function(){
+			$(".tab_title li").mouseover(function(){
+			var i=$(".tab_title li").index(this);
+			$(".tab_content").hide().eq(i).show();
+		$(this).addClass("curr").siblings("li").removeClass("curr");
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="header">
+			<div class="header_z">
+				<img src="img/新logo.png">
+				<div class="sousuo"><input type="text" name="sou" id="sou" placeholder="请输入菜谱/食材/菜单/作者">
+				<input type="submit" name="submit" class="submit" value="搜索"></div>
+				<div class="denglu"><ul>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">登录</a></li>
+				</ul></div>
+			</div>
+			</div>
+			<div id="nav">
+				<ul class="zhong">
+					<li><a href="p1.html">首页</a>
+						<div class="current"></div>
+						<div class="menu"></div>
+					</li>
+					<li class="YC"><a href="#">菜谱大全</a>
+						<div class="current none"></div>
+						<div class="menu">
+							<div id="daquan" class="zhong">
+								<dl>
+									<dt><a href="#">素菜</a></dt>
+									<dd><a href="#">素炒豌豆苗</a></dd>
+									<dd><a href="p2.html">荷兰豆炒虾仁</a></dd>
+									<dd><a href="#">有机花菜</a></dd>
+									<dd><a href="#">素炒杏鲍菇</a></dd>
+									<dd><a href="#">茄汁脆皮豆腐</a></dd>
+									<dd><a href="#">炝炒辣子白</a></dd>
+									<dd><a href="#">黑木耳雷笋炒腐竹</a></dd>
+									<dd><a href="#">素炒西兰花</a></dd>
+									<dd><a href="#">素炒莴笋叶</a></dd>
+									<dd><a href="p3.html">更多>></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="#">荤菜</a></dt>
+									<dd><a href="#">秘制香辣鸡腿</a></dd>
+									<dd><a href="#">烤五花肉串</a></dd>
+									<dd><a href="#">酱焖豆角</a></dd>
+									<dd><a href="#">红烧肉</a></dd>
+									<dd><a href="#">猪肚煲土鸡</a></dd>
+									<dd><a href="#">圣诞烤鸡</a></dd>
+									<dd><a href="#">东坡肉</a></dd>
+									<dd><a href="#">红烧排骨</a></dd>
+									<dd><a href="#">包菜回锅肉</a></dd>
+									<dd><a href="#">肉末蒸蛋</a></dd>
+									<dd><a href="#">水煮牛肉</a></dd>
+									<dd><a href="#">更多>></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="#">西餐</a></dt>
+									<dd><a href="#">奥尔良烤翅</a></dd>
+									<dd><a href="#">肉酱意大利面</a></dd>
+									<dd><a href="#">上校鸡块</a></dd>
+									<dd><a href="#">自制牛排</a></dd>
+									<dd><a href="#">火烧云吐司</a></dd>
+									<dd><a href="#">鸡肉黑椒披萨</a></dd>
+									<dd><a href="#">南瓜酸奶浓汤</a></dd>
+									<dd><a href="#">奶油三文鱼意面</a></dd>
+									<dd><a href="#">黑椒牛排</a></dd>
+									<dd><a href="#">更多>></a></dd>
+								</dl>
+								<img src="img/面条.png" />
+							</div>
+							
+						</div>
+					</li>
+					<li><a href="#">中华菜系</a>
+						<div class="current none"></div>
+						
+					</li>
+					<li><a href="#">儿童餐</a>
+						<div class="current none"></div>
+					</li>
+					<li><a href="#">食疗食补</a>
+						<div class="current none"></div>
+					</li>
+					<li><a href="#">厨艺排名</a>
+						<div class="current none"></div>
+					</li>
+					<li><a href="#">厨艺大比拼</a>
+						<div class="current none"></div>
+					</li>
+					<li><a href="#">手机版下载</a>
+						<div class="current none"></div>
+					</li>
+				</ul>
+			</div><div class="clear"></div>
+			<div class="biaoti"><h2>一天好生活，吃饭不将就！</h2></div>
+			<div id="tuijian">
+				<img src="img/横幅1.jpg" />
+			</div>
+			<script type="text/javascript">
+				var myimg=new Array("横幅1.jpg","横幅2.jpg","横幅2.jpg","横幅4.jpg");
+//			简化写法 var i = [1,2,3,5,100,.....]标准写法 var i = new Array(); i[0] = 1;......
+			var i=0;
+			var tupian=document.getElementsByTagName("img")[2];
+			function changeimg(){
+				tupian.setAttribute("src","img/"+myimg[i++]);
+				if(i==myimg.length)i=0;
+			}
+			setInterval("changeimg()",1000)
+			</script>
+			
+			<div id="tab">
+				<div class="tab_title">
+				<ul>
+					<li class="curr">早餐推荐</li>
+					<li>午餐推荐</li>
+					<li>晚餐推荐</li>
+					<li>夜宵推荐</li>
+					<li>孕妇推荐</li>
+					<li>婴儿推荐</li>
+					<li class="last">老人推荐</li>
+				</ul>
+			</div>
+			<div class="tab_content">
+				<div class="content_L"><img src="img/早餐.jpg"></div>
+				<div class="content_R">
+					<h1>紫甘蓝燕麦粥<span><a href="#">我要学习</a></span></h1>
+					<dl class="youdian">
+						<dt><a href="#">防癌</a></dt>
+						<dt><a href="#">润肠通便</a></dt>
+						<dt><a href="#">抵抗力</a></dt>
+						<dt><a href="#">减肥瘦身</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">防皮疹</a></dt>
+						<dt><a href="#">减肥</a></dt>
+					</dl>
+					<div class="youdian_2">
+					<ul>
+						<li><a href="#">1、紫甘蓝能够给人体提供一定数量的具有重要作用的抗氧化剂：维生素E与维生素A前身物质(β―胡萝卜)，这些抗氧化成分能够保护身体免受自由基的损伤，并能有助于细胞的更新。</a></li>
+						<li><a href="#">2、紫甘蓝含有丰富的硫元素，这种元素的主要作用是杀虫止痒，对于各种皮肤瘙痒，湿疹等疾患具有一定疗效，因而经常吃这类蔬菜对于维护皮肤健康十分有益。</a></li>
+						<li><a href="#">3、紫甘蓝中含有的大量纤维素，能够增强胃肠功能，促进肠道蠕动，以及降低胆固醇水平。</a></li>
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="tab_content none">
+								<div class="content_L"><img src="img/午餐.jpg"></div>
+				<div class="content_R">
+					<h1>金沙火腿豆腐<span><a href="#">我要学习</a></span></h1>
+					<dl class="youdian">
+						<dt><a href="#">补钙</a></dt>
+						<dt><a href="#">缓解更年期</a></dt>
+						<dt><a href="#">预防疾病</a></dt>
+						<dt><a href="#">有益大脑</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">防皮疹</a></dt>
+						<dt><a href="#">减肥</a></dt>
+					</dl>
+					<div class="youdian_2">
+					<ul>
+						<li><a href="#">豆腐营养极高，含铁、镁、钾、烟酸、铜、钙、锌、磷、叶酸、维生素B1、蛋黄素和维生素B6。每100克结实的豆腐中，水分占69.8%，含蛋白质15.7克、脂肪8.6克、碳水化合物4.3克和纤维0.1克，能提供611.2千焦的热量。豆腐里的高氨基酸和蛋白质含量使之成为谷物很好的补充食品。豆腐脂肪的78%是不饱和脂肪酸并且不含有胆固醇，素有“植物肉”之美称。豆腐的消化吸收率达95%以上。两小块豆腐，即可满足一个人一天钙的需要量。</a></li>
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="tab_content none">
+				<div class="content_L"><img src="img/晚餐.jpg"></div>
+				<div class="content_R">
+					<h1>番茄牛腩<span><a href="#">我要学习</a></span></h1>
+					<dl class="youdian">
+						<dt><a href="#">强身健体</a></dt>
+						<dt><a href="#">贫血</a></dt>
+						<dt><a href="#">抵抗力</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">防皮疹</a></dt>
+						<dt><a href="#">减肥</a></dt>
+						<dt><a href="#">防皮疹</a></dt>
+					</dl>
+					<div class="youdian_2">
+					<ul>
+						<li><a href="#">1、牛肉有补中益气，滋养脾胃，强健筋骨，化痰息风，止渴止涎之功效，适宜于中气下隐、气短体虚、筋骨酸软、贫血久病及面黄目眩之人食用。</a></li>
+						<li><a href="#">2、提高免疫力。牛肉富含蛋白质，氨基酸组成比猪肉更接近人体需要，能提高机体抗病能力，对生长发育及术后，病后调养的人在补充失血、修复组织等方面特别适宜，寒冬食牛肉可暖胃，是该季节的补益佳品；</a></li>
+						<li><a href="#">3、防癌。因西红柿不仅营养丰富，且具有较强的清热解毒、抑制病变功效，坚持每天生食1～个鲜熟的西红柿，可起到防癌和辅助治疗癌症的作用。</a></li>
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="tab_content none">
+								<div class="content_L"><img src="img/夜宵.jpg"></div>
+				<div class="content_R">
+					<h1>明太鱼乌冬面<span><a href="#">我要学习</a></span></h1>
+					<dl class="youdian">
+						<dt><a href="#">防癌</a></dt>
+						<dt><a href="#">镇静</a></dt>
+						<dt><a href="#">助眠</a></dt>
+						<dt><a href="#">美容</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">养颜</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">益智</a></dt>
+					</dl>
+					<div class="youdian_2">
+					<ul>
+						<li><a href="#">1、紫甘蓝能够给人体提供一定数量的具有重要作用的抗氧化剂：维生素E与维生素A前身物质(β―胡萝卜)，这些抗氧化成分能够保护身体免受自由基的损伤，并能有助于细胞的更新。</a></li>
+						<li><a href="#">2、紫甘蓝含有丰富的硫元素，这种元素的主要作用是杀虫止痒，对于各种皮肤瘙痒，湿疹等疾患具有一定疗效，因而经常吃这类蔬菜对于维护皮肤健康十分有益。</a></li>
+						<li><a href="#">3、紫甘蓝中含有的大量纤维素，能够增强胃肠功能，促进肠道蠕动，以及降低胆固醇水平。</a></li>
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="tab_content none">
+												<div class="content_L"><img src="img/孕妇.jpg"></div>
+				<div class="content_R">
+					<h1>红参鸡汤<span><a href="#">我要学习</a></span></h1>
+					<dl class="youdian">
+						<dt><a href="#">防癌</a></dt>
+						<dt><a href="#">镇静</a></dt>
+						<dt><a href="#">助眠</a></dt>
+						<dt><a href="#">美容</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">养颜</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">益智</a></dt>
+					</dl>
+					<div class="youdian_2">
+					<ul>
+						<li><a href="#">很喜欢给家人煲汤，尤其是秋冬季节更应该喝一些汤汤水水，给身体补充足量的水分和能量，帮我们对抗严寒的冬天。小公鸡一般炖着吃，而老母鸡煲汤则是最佳，加上一点红参，滋补而不上火。秋季保胃战就从这碗暖暖的鸡汤开始把。</a></li>
+						
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="tab_content none">
+																<div class="content_L"><img src="img/婴儿.jpg"></div>
+				<div class="content_R">
+					<h1>三色藜麦蛋烧<span><a href="#">我要学习</a></span></h1>
+					<dl class="youdian">
+						<dt><a href="#">健脑</a></dt>
+						<dt><a href="#">益智</a></dt>
+						<dt><a href="#">护肝</a></dt>
+						<dt><a href="#">美容</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">养颜</a></dt>
+						<dt><a href="#">防癌</a></dt>
+						<dt><a href="#">延年益寿</a></dt>
+					</dl>
+					<div class="youdian_2">
+					<ul>
+						<li><a href="#">咬上一口，既有鸡蛋的滑嫩，藜麦QQ的口感，还有浓浓的芝士香，兴奋到第一时间想拿来跟你们分享，一日三餐都能吃，加在外带便当里也非常适合。</a></li>
+						
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="tab_content none">
+																			<div class="content_L"><img src="img/老人.jpg"></div>
+				<div class="content_R">
+					<h1>清炒小河虾<span><a href="#">我要学习</a></span></h1>
+					<dl class="youdian">
+						<dt><a href="#">健脑</a></dt>
+						<dt><a href="#">益智</a></dt>
+						<dt><a href="#">护肝</a></dt>
+						<dt><a href="#">美容</a></dt>
+						<dt><a href="#">抗衰老</a></dt>
+						<dt><a href="#">养颜</a></dt>
+						<dt><a href="#">防癌</a></dt>
+						<dt><a href="#">延年益寿</a></dt>
+					</dl>
+					<div class="youdian_2">
+					<ul>
+						<li><a href="#">想要更健康，一定要多吃一些小小的食物，像小鱼小虾还有小小的豆子五谷杂粮等，这对我们健康非常有好处。</a></li>
+						
+					</ul>
+					</div>
+					
+				</div>
+			</div>
+			</div>
+			
+			
+			
+			<div id="zixun">
+			<div class="zixun_dh">
+				<h3><a href="#">美食知识</a></h3>
+			&nbsp;/&nbsp;
+			<a href="#">健康养生</a>&nbsp;/&nbsp;
+			<a href="#">烹饪技巧</a>&nbsp;/&nbsp;
+			<a href="#">美食精选</a>&nbsp;/&nbsp;
+			<a href="#">美食杂谈</a>
+				</div>
+			<div id="left">
+				<a href="#"><img src="img/资讯1.jpg"/></a>
+				
+			</div>
+			<div id="right">
+				<ul>
+					<li><a href="#">晚上吃苹果是毒苹果？关于苹果的五大传言</a></li>
+					<li><a href="#">深夜肚子很饿又怕胖，要不要吃夜宵？</a></li>
+					<li><a href="#">困了只想喝咖啡？多吃7种食物也能醒脑提神。</a></li>
+					<li><a href="#">晚餐吃太饱有6大危害，七八分饱最合适。</a></li>
+					<li><a href="#">注意！洗牙不等于美白牙齿</a></li>
+					<li><a href="#">睡姿不对，腰椎受罪</a></li>
+					<li><a href="#">去黑头不能不知3个小妙招</a></li>
+
+				</ul>
+			</div>
+			</div>
+			<footer>
+				<div class="mingzi">
+					<h1>美食家</h1>
+				</div>
+				<div class="lianxi">
+					<ul>
+						<li><a href="#">公司简介</a></li>
+						<li><a href="#">企业文化</a></li>
+						<li><a href="#">公司动态</a></li>
+						<li><a href="#">免责声明</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">招贤纳士</a></li>
+						<li><a href="#">商务合作</a></li>
+						<li><a href="#">网站地图</a></li>
+						<li><a href="#">友情链接</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		
+	</body>
+</html>
